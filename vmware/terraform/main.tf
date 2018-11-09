@@ -35,9 +35,9 @@ resource "null_resource" "create-temp-random-dir" {
   }
 }
 
-module "deployVM_singlenode" {
-  source = "git::https://github.com/IBM-CAMHub-Open/template_icp_modules.git?ref=2.2//vmware_provision"
 
+module "deployVM_singlenode" {
+  source = "git::https://github.com/ibmmkeppeler/template_icp_modules.git?ref=master//vmware_provision"
   #######
   vsphere_datacenter    = "${var.vsphere_datacenter}"
   vsphere_resource_pool = "${var.vsphere_resource_pool}"
